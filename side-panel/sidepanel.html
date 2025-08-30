@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的侧边栏</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="sidebar-container">
+    <!-- 头部区域 -->
+    <header class="sidebar-header">
+      <h2>🚀 扩展工具栏</h2>
+      <button id="pinBtn" class="pin-btn" title="固定侧边栏">📌</button>
+    </header>
+
+    <!-- 标签切换 -->
+    <nav class="tab-nav">
+      <button class="tab-btn active" data-tab="dashboard">仪表板</button>
+      <button class="tab-btn" data-tab="tools">工具</button>
+      <button class="tab-btn" data-tab="settings">设置</button>
+    </nav>
+
+    <!-- 内容区域 -->
+    <main class="sidebar-content">
+      <!-- 仪表板标签 -->
+      <div id="dashboard" class="tab-content active">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>今日访问</h3>
+            <span id="visitCount" class="stat-number">0</span>
+          </div>
+          <div class="stat-card">
+            <h3>活跃标签</h3>
+            <span id="tabCount" class="stat-number">0</span>
+          </div>
+          <div class="stat-card">
+            <h3>书签数量</h3>
+            <span id="bookmarkCount" class="stat-number">0</span>
+          </div>
+        </div>
+        
+        <div class="recent-activity">
+          <h3>最近活动</h3>
+          <ul id="activityList" class="activity-list">
+            <!-- 动态生成 -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- 工具标签 -->
+      <div id="tools" class="tab-content">
+        <div class="tool-section">
+          <h3>页面工具</h3>
+          <div class="tool-buttons">
+            <button id="screenshotBtn" class="tool-btn">📸 截图</button>
+            <button id="bookmarkBtn" class="tool-btn">⭐ 书签</button>
+            <button id="translateBtn" class="tool-btn">🌐 翻译</button>
+            <button id="readModeBtn" class="tool-btn">📖 阅读模式</button>
+          </div>
+        </div>
+
+        <div class="tool-section">
+          <h3>快速操作</h3>
+          <div class="quick-actions">
+            <input type="text" id="searchInput" placeholder="搜索或输入网址...">
+            <button id="goBtn" class="go-btn">Go</button>
+          </div>
+        </div>
+
+        <div class="tool-section">
+          <h3>标签管理</h3>
+          <div id="tabManager" class="tab-manager">
+            <!-- 动态生成标签列表 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 设置标签 -->
+      <div id="settings" class="tab-content">
+        <div class="settings-group">
+          <h3>外观设置</h3>
+          <label class="setting-item">
+            <span>深色主题</span>
+            <input type="checkbox" id="darkMode">
+          </label>
+          <label class="setting-item">
+            <span>自动固定侧边栏</span>
+            <input type="checkbox" id="autoPin">
+          </label>
+        </div>
+
+        <div class="settings-group">
+          <h3>功能设置</h3>
+          <label class="setting-item">
+            <span>启用快捷键</span>
+            <input type="checkbox" id="shortcuts">
+          </label>
+          <label class="setting-item">
+            <span>显示通知</span>
+            <input type="checkbox" id="notifications">
+          </label>
+        </div>
+
+        <div class="settings-group">
+          <h3>数据管理</h3>
+          <button id="exportBtn" class="action-btn">导出数据</button>
+          <button id="clearBtn" class="action-btn danger">清除数据</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
