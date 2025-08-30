@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "pop-action",
+  "version": "1.0.0",
+  "description": "A simple action that pops a message",
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

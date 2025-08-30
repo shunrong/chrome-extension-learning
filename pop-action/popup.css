@@ -1,0 +1,18 @@
+
+.title {
+  color: red;
+  background-color:white;
+  &:hover {
+    color: blue;
+  }
+}
+
+.subtitle {
+  background-color: blueviolet;
+}
+
+.content {
+  color: green;
+  width: 200px;
+  margin: 20px auto;
+}

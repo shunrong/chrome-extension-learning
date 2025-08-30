@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "content-script",
+  "version": "1.0.0",
+  "description": "A simple content script that pops a message",
+  "icons": {
+    "16": "icon-star.png",
+    "48": "icon-star.png",
+    "128": "icon-star.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://developer.mozilla.org/*"],
+      "js": ["./content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
